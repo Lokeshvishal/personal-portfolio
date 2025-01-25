@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home {
+            background: #000;
+        }
+
+        .social-icons {
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            color: #00cccc;
+            font-size: 36px;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .btn {
+            background-color: #00cccc;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            display: inline-block;
+            font-size: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        #about {
+            background: #e9ecef;
+        }
+
+        #skills {
+            background: #f8f9fa;
+        }
+        .skills {
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 36px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .skill-item {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .skill-item span {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+    position: relative;
+    height: 25px;
+    width: 300px;
+    background-color: #222;
+    border: 1px solid #00cccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background-color: #00cccc;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.progress-bar .progress-percent {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 30px;
+    z-index: 1;
+}
+
+.progress-bar[data-percent="90"] .progress-bar-inner {
+    width: 90%;
+}
+
+.progress-bar[data-percent="70"] .progress-bar-inner {
+    width: 70%;
+}
+
+.progress-bar[data-percent="60"] .progress-bar-inner {
+    width: 60%;
+}
+
+/* Hover effect */
+.progress-bar:hover {
+    background-color: #d3dede;
+    transform: scale(1.02);
+}
+
+.progress-bar:hover .progress-bar-inner {
+    background-color: #fff;
+}
+
+        #projects {
+            background: #fff;
+        }
+        
+        
+        
+
+        #contact {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <div class="container">
+            <h1 style="color:#fff">Hello, This is</h1>
+            <h2 style="color:#fff">K. Lokesh</h2>
+            <p style="color:#fff"  class="lead">And I am <span style="color: orangered;"><b>UI/UX Designer</b></span></p>
+            <img style="height: 250px; width: 250px; border: 5px solid #00cccc; border-radius: 50%;" src="./401.JPG" alt="Profile Picture">
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="path/to/cv.pdf" class="btn" download>Download CV</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <img src="./401.JPG" alt="Profile Picture" 
+                style="height: 250px; width: 250px; border: 5px solid #00cccc; border-radius: 50%; margin: 20px 0;">
+            
+            <div class="about-content">
+                <p style="text-align: justify; font-size: 18px; line-height: 1.8; margin: 20px 0;">
+                    I am <strong>K. Lokesh</strong>, a budding <strong>UI/UX Designer</strong> eager to dive into the world of creating intuitive and visually compelling user interfaces. 
+                    While I currently have <strong>no professional experience</strong>, I am passionate about learning and bringing fresh perspectives to design. 
+                    My goal is to craft digital experiences that are not only aesthetically pleasing but also user-friendly and accessible. 
+                    I am committed to enhancing my skills and contributing creatively to impactful projects.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <div class="skills" id="skills">
+            <h2>Skills</h2>
+            <div class="skill-item">
+                <span>Figma</span>
+                <div class="progress-bar" data-percent="90">
+                    <div class="progress-bar-inner"></div>
+                    <span class="progress-percent">90%</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span>HTML</span>
+                <div class="progress-bar" data-percent="70">
+                    <div class="progress-bar-inner"></div>
+                    <span class="progress-percent">70%</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span>CSS</span>
+                <div class="progress-bar" data-percent="70">
+                    <div class="progress-bar-inner"></div>
+                    <span class="progress-percent">70%</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span>MySQL</span>
+                <div class="progress-bar" data-percent="60">
+                    <div class="progress-bar-inner"></div>
+                    <span class="progress-percent">60%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Projects</h2>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="card h-100 shadow-sm mx-auto" style="max-width: 300px;">
+                        <img src="./Screenshot (57).png" alt="Car Care Project" class="card-img-top project-image" style="height: 200px; object-fit:contain; background-color:#c73658e1;">
+                        <div class="card-body">
+                            <h3 class="card-title">Project 1</h3>
+                            <h4>Car Care Portfolio</h4>
+                            <p class="card-text">A conceptual design for a car care focusing on intuitive navigation and a modern UI/UX approach.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="card h-100 shadow-sm mx-auto" style="max-width: 300px;">
+                        <img src="./WhatsApp Image 2025-01-22 at 12.10.53 PM.jpeg" alt="IoT Car Project" class="card-img-top project-image" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="card-title">Project 2</h3>
+                            <h4>Automation Car using IoT</h4>
+                            <p class="card-text">An automation car using IoT with ESP8266 enables wireless control and monitoring of vehicle functions through internet connectivity, enhancing automation and user interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <div class="container my-4" id="contact">
+        <h2 class="text-info text-center mb-3">Contact</h2>
+        <form class="bg-dark p-3 rounded text-white" style="max-width: 400px; margin: 0 auto;">
+            <div class="mb-2">
+                <label for="name" class="form-label small">Enter Your Name</label>
+                <input type="text" class="form-control form-control-sm" id="name" placeholder="" required>
+            </div>
+            <div class="mb-2">
+                <label for="email" class="form-label small">Enter Your Email</label>
+                <input type="email" class="form-control form-control-sm" id="email" placeholder="" required>
+            </div>
+            <div class="mb-2">
+                <label for="mobile" class="form-label small">Enter Your Mobile Number</label>
+                <input type="tel" class="form-control form-control-sm" id="mobile" placeholder="" required>
+            </div>
+            <div class="mb-2">
+                <label for="message" class="form-label small">Type Your Message</label>
+                <textarea id="message" class="form-control form-control-sm" rows="3" placeholder="" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-info btn-sm w-100 height-50">Submit</button>
+        </form>
+    </div>
+    <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-1">Copyright © 2025 Personal Portfolio | All rights reserved</p>
+    <a href="mailto:klokesh011004@gmail.com" class="text-info text-decoration-none">klokesh011004@gmail.com</a>
+</footer>
+
+    
+        
+       
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
