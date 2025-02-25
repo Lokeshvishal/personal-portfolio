@@ -144,12 +144,72 @@
         #projects {
             background: #fff;
         }
-        
-        
-        
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin-left: 450px;
+        }
 
-        #contact {
-            background: #f8f9fa;
+        /* Form elements */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+    background-color: #00cccc;
+    
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+                font-size: 12px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -274,26 +334,32 @@
     <br><br><br><br>
     <div class="container my-4" id="contact">
         <h2 class="text-info text-center mb-3">Contact</h2>
-        <form class="bg-dark p-3 rounded text-white" style="max-width: 400px; margin: 0 auto;">
-            <div class="mb-2">
-                <label for="name" class="form-label small">Enter Your Name</label>
-                <input type="text" class="form-control form-control-sm" id="name" placeholder="" required>
+    
+        <form action="https://formspree.io/f/mdkaeowa" method="POST" class="bg-light p-4 shadow rounded mx-auto" style="max-width: 500px;">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
             </div>
-            <div class="mb-2">
-                <label for="email" class="form-label small">Enter Your Email</label>
-                <input type="email" class="form-control form-control-sm" id="email" placeholder="" required>
+    
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
-            <div class="mb-2">
-                <label for="mobile" class="form-label small">Enter Your Mobile Number</label>
-                <input type="tel" class="form-control form-control-sm" id="mobile" placeholder="" required>
+    
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" pattern="[0-9]{10}" required>
             </div>
-            <div class="mb-2">
-                <label for="message" class="form-label small">Type Your Message</label>
-                <textarea id="message" class="form-control form-control-sm" rows="3" placeholder="" required></textarea>
+    
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
             </div>
-            <button type="submit" class="btn btn-info btn-sm w-100 height-50">Submit</button>
+    
+            <button type="submit" class="btn btn-info w-100">Submit</button>
         </form>
     </div>
+    
     <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
     <p class="mb-1">Copyright © 2025 Personal Portfolio | All rights reserved</p>
